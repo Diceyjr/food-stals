@@ -2,18 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>QuickBite | Order via WhatsApp</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header class="header">
         <div class="container">
             <h1 class="logo">Quick<span>Bite</span></h1>
@@ -22,81 +18,23 @@
     </header>
 
     <main class="container">
-
-        <!-- MENU -->
         <section class="menu-section">
             <h2 class="section-title">Our Menu</h2>
-
             <div id="menu-grid" class="menu-grid">
-                <!-- JS injects menu items -->
+                <!-- Menu items will be injected by JavaScript -->
             </div>
         </section>
 
-        <!-- ORDER -->
         <section id="order-section" class="order-section">
             <h2 class="section-title">Delivery Details</h2>
-
             <form id="order-form" class="order-form">
-
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" required placeholder="Enter your name">
                 </div>
-
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" required placeholder="e.g. 08012345678">
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Delivery Address</label>
-                    <textarea id="address" required placeholder="Enter your full address" rows="3"></textarea>
-                </div>
-
-                <!-- CART -->
-                <div id="cart-summary" class="cart-summary">
-                    <h3>Your Order</h3>
-
-                    <p style="font-size: 12px; color: gray;">
-                        Tap ❌ to remove items
-                    </p>
-
-                    <div id="cart-items-list" class="cart-items-list">
-                        <p class="empty-cart-msg">No items added yet</p>
-                    </div>
-
-                    <div class="cart-total">
-                        <span>Total:</span>
-                        <span id="total-price">₦0.00</span>
-                    </div>
-                </div>
-
-                <button type="submit" id="whatsapp-btn" class="btn btn-primary btn-block" disabled>
-                    Order on WhatsApp
-                </button>
-
-            </form>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2026 QuickBite. All rights reserved.</p>
-    </footer>
-
-    <!-- FLOATING CART (Mobile) -->
-    <div id="floating-cart" class="floating-cart hidden">
-        <span id="cart-count">0</span>
-
-        <button onclick="document.getElementById('order-section').scrollIntoView({behavior: 'smooth'})">
-            View Order
-        </button>
-    </div>
-
-    <script src="script.js"></script>
-
-</body>
-</html>                    <input type="tel" id="phone" required placeholder="e.g. +1234567890">
+                    <input type="tel" id="phone" required placeholder="e.g. +1234567890">
                 </div>
                 <div class="form-group">
                     <label for="address">Delivery Address</label>
@@ -108,7 +46,6 @@
                     <div id="cart-items-list" class="cart-items-list">
                         <p class="empty-cart-msg">No items added yet</p>
                     </div>
-                    <div id="cart-items"></div>
                     <div class="cart-total">
                         <span>Total:</span>
                         <span id="total-price">₦0.00</span>
