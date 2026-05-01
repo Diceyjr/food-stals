@@ -55,6 +55,27 @@ const floatingCart = document.getElementById('floating-cart');
 const cartCount = document.getElementById('cart-count');
 const orderForm = document.getElementById('order-form');
 
+function renderCart() {
+  const cartContainer = document.getElementById("cart-items");
+  cartContainer.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    cartContainer.innerHTML += `
+      <div>
+        <span>${item.name} - ₦${item.price}</span>
+        <button onclick="removeFromCart(${index})">Remove</button>
+      </div>
+    `;
+  });
+}
+
+function removeFromCart(index) {
+  if (confirm("Remove this item?")) {
+    cart.splice(index, 1);
+    renderCart();
+  }
+}
+
 // Initialize Menu
 function initMenu() {
     menuItems.forEach(item => {
